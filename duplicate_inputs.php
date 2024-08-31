@@ -9,7 +9,7 @@
 <?php if ($_GET["submit"]==1){
     
     $i=0;
-    while ($i<count($_GET["name"]){
+    while ($i<count($_GET["name"])){
            //handel duplicate 
            //add connection 
            //insert to data base 
