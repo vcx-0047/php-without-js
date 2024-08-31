@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>duplicate inputs </title> 
 </head>
-<?php if ($_GET["submit"]==1){
+<?php if (isset( $_GET["submit"]) && $_GET["submit"]==1){
     
     $i=0;
     while ($i<count($_GET["name"])){
@@ -14,6 +14,7 @@
            //add connection 
            //insert to data base 
            $sql="insert into taable (name ,fname) values($_GET[name][$i],$_GET[fname][$i])";
+           $i++;
     }
      header("Location: ./duplicate_inputs.php");
 
