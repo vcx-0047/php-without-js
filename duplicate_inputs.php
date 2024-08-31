@@ -13,11 +13,11 @@
            //handel duplicate 
            //add connection 
            //insert to data base 
-           $sql="insert into taable (name ,fname) values($_GET["name"][$i],$_GET["fname"][$i])";
+           $sql="insert into taable (name ,fname) values($_GET[name][$i],$_GET[fname][$i])";
     }
      header("Location: ./duplicate_inputs.php");
 
-}
+}?>
 <body>
     <form action="" method="get">
         <table>
