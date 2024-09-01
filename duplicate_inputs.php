@@ -5,9 +5,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>duplicate inputs </title> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        table {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 0.03em;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        input[type="text"] {
+            width: calc(100% - 24px);
+            padding: 8px;
+            margin: 0;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        tbody tr:last-child td {
+            text-align: center;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            table {
+                width: 100%;
+            }
+
+            th, td {
+                font-size: 12px;
+                padding: 8px;
+            }
+
+            input[type="text"] {
+                width: calc(100% - 16px);
+            }
+
+            button {
+                font-size: 12px;
+                padding: 6px 12px;
+            }
+        }
+    </style>
 </head>
-<?php if (isset( $_GET["submit"]) && $_GET["submit"]==1){
-    
+<?php if (isset( $_GET["submit"]) && $_GET["submit"]==1){ 
     $i=0;
     while ($i<count($_GET["name"])){
            //handel duplicate 
